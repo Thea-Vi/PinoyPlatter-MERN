@@ -6,7 +6,7 @@ body {
     sans-serif;
 
   font-family: 'Poppins', sans-serif !important;
-  background-color: rgba(14, 13, 13, 0.932)
+  background-color: rgba(14, 13, 13, 0.932);
 }
 
 code {
@@ -14,16 +14,33 @@ code {
     monospace;
 }
 
+.App{
+  width: 1000px;
+  border: 2px solid gray;
+  margin-left: 210px;
+
+
+}
+
+.main-container{
+  border: 2px solid gray;
+}
 
 .body{
   height: 100vh;
 }
 
+.main{
+  margin-top: 20px;
+}
 h1{
   font-size: 30px;
-  color: rgb(114, 108, 108);
+  color: rgb(170, 162, 162);
 }
 
+h2{
+  font-size: 20px;
+}
 .image{
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -32,23 +49,26 @@ h1{
   -o-border-radius: 50%;
 }
 .platter{
-  background-color: rgb(206, 197, 197);
+  background-color: rgb(209,113,34);
   border: none;
-  
+  border-radius: 10px;
+
 }
 
 .quantity{
   background-color: rgb(201, 184, 184) ;
   border: none;
-  
+  border-radius: 10px;
+
 }
 .foodcontainer{
   display: flex;
 }
 
 .btn-cart{
-  background-color: rgb(219, 233, 233);
-  border-radius: 5px;
+  background-color: rgb(209,113,34);
+  border-radius: 10px;
+  border: none;
 
 }
 
@@ -56,20 +76,62 @@ h1{
   font-size: 20px;
 }
 
+.itemcartbox{
+  border: 2px solid gray;
+  margin-top: 10px;
+
+}
+
+label{
+  color: white;
+}
+
+.register{
+  border: 2px solid gray;
+  display: flex;
+  height: 80vh;
+  
+  
+}
+
+
+.form_control{
+  background-color: black;
+}
+
+.login{
+  border: 2px solid gray;
+
+}
+
+.btn btn-warning{
+  text-decoration: none;
+}
+
 
 p{
   margin-top: 5px;
   margin-bottom: 0;
+  color: indianred;
 }
 
 .nav-link{
-  color: darkgrey !important;
+  color: rgb(27, 26, 26) !important;
+  margin-left: 50px;
+  font-size: 20px;
+  background-color: rgb(97, 91, 84);
+
 }
 
 .navbar-brand{
-  color: rgb(79, 91, 92) !important;
+  color: rgb(224, 115, 26) !important;
   font-size: 50px;
-  background-color: rgb(197, 204, 202);
+  background-color: rgba(14, 13, 13, 0.932);
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  
 }
 
+.navbar{
+  background-color: rgb(70, 60, 48);
+}

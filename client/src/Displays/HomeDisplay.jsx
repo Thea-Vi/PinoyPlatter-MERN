@@ -10,6 +10,7 @@ import Food from '../Components/Food'
 const HomeDisplay = () => {
     const dispatch = useDispatch()
 
+
     // useSelector- takes current state as an arg and returns thatever data you want from it
     const foodsState = useSelector(state => state.getAllFoodsReducer)
 
@@ -23,8 +24,8 @@ const HomeDisplay = () => {
 
 
     return (
-        <div>
-            <div className="row">
+        <div className='main-homeDisplay'>
+            <div className="row justify-content-center">
                 {loading ? (
                     <h1>Loading...</h1>
                 ) : error ? (

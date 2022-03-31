@@ -1,10 +1,18 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 
 const Navbar = () => {
+
+  // UseSelector function takes the current start of the cart as an argument and returns the data 
+  const cartState = useSelector(state => state.cartReducer)
+
+
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg shadow-none p-3 mb-5 bg-light rounded">
-        <a className="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg ">
+        <a className="navbar-brand" href="/">
           PINOY PLATTER
         </a>
         <button
@@ -21,15 +29,17 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                LOGIN
+              <a className="nav-link" href="/register">
+                Have an account? Please log in
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                CART
+              <a className="" href="/cart">
+                Items {cartState.cartItems.length}
               </a>
+         
             </li>
+           
           
           </ul>
         </div>
