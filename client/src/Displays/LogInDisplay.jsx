@@ -1,27 +1,56 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../Actions/UserActions';
+
 
 
 const LogInDisplay = () => {
+
+    // state variables for the user input
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("")
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+
+        if (localStorage.getItem("userCurrent"))
+        {
+            window.location.href="/"
+        }
+      
+    }, [])
+
+    // LOG IN FUNCTION FROM ACTIONS
+    const login = (e) => {
+        e.preventDefault()
+
+        // store data into user - will send it to UserAction to post
+        const user = {
+            email,
+            password
+        }
+        console.log(user)
+        dispatch(loginUser(user))
+
+    }
+
     return (
-        <main style={{ backgroundImage: `url(https://www.pilotonline.com/resizer/1xf3rbjTQRMIug3lKNGCZ4pkgvQ=/800x1066/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/JXO2G4CMR5G4JPUJGAK57727TA.jpg)` }}>
+        <main style={{ backgroundImage: `url(https://static.onecms.io/wp-content/uploads/sites/9/2017/11/filipino-kamayan-FT-MAG1217.jpg)` }}>
             <div className='justify-content-center register '>
                 <div className='col-md-4' >
-                    <h1 log-in>Log In</h1>
-                    <form className='form-group'>
+                    <h1>Log In</h1>
+                    <form className='form-group' required>
                         <div>
-
-
                             <label>Email Address</label>
-                            <input style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" id="" className='form-control' />
+                            <input required onChange={(e) => { setEmail(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" className='form-control' value={email} />
 
                             <label>Password</label>
-                            <input style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" id="" className='form-control' />
-
+                            <input required onChange={(e) => { setPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name=""  className='form-control' value={password}/>
                         </div>
-                        <button className='btn btn-primary'>Log In</button>
+                        <button onClick={login}  className='btn btn-primary'>Log In</button>
                     </form>
-                    
 
                 </div>
 
