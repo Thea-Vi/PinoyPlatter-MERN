@@ -36,7 +36,7 @@ const RegisterDisplay = () => {
 
 
     return (
-        <main style={{backgroundImage: `url(https://nfg-sofun.s3.amazonaws.com/uploads/event/photo/11643/poster_board_860D83B9-B093-43CB-88D8-4871AADA8026.jpeg)`}}>
+        <main style={{backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/576c194cf5e231d654d02378/1479430130486-3I4R5GM4OVVDLX96R9UP/image-asset.jpeg?format=1000w)`}}>
             <div className='justify-content-center register '>
                 <div className='col-md-4' >
                     <h1>Register</h1>

@@ -75,7 +75,7 @@ const Food = ({ food }) => {
                     </Modal.Header>
 
                     <Modal.Body>
-                        <img src={food.image} alt="food" style={{ height: "250px", width: "300px" }} />
+                        <img className='text-center' src={food.image} alt="food" style={{ height: "250px", width: "300px" }} />
                         <h5>{food.description}</h5>
                     </Modal.Body>
 

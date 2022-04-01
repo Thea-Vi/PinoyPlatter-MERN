@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const LogInDisplay = () => {
     return (
-        <main style={{ backgroundImage: `url(https://nfg-sofun.s3.amazonaws.com/uploads/event/photo/11643/poster_board_860D83B9-B093-43CB-88D8-4871AADA8026.jpeg)` }}>
+        <main style={{ backgroundImage: `url(https://www.pilotonline.com/resizer/1xf3rbjTQRMIug3lKNGCZ4pkgvQ=/800x1066/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/JXO2G4CMR5G4JPUJGAK57727TA.jpg)` }}>
             <div className='justify-content-center register '>
                 <div className='col-md-4' >
-                    <h1>Log In</h1>
+                    <h1 log-in>Log In</h1>
                     <form className='form-group'>
                         <div>
 

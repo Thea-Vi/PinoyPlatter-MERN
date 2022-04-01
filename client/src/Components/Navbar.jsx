@@ -1,5 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from 'react-router-dom'
+
 
 
 const Navbar = () => {
@@ -11,39 +13,18 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg ">
-        <a className="navbar-brand" href="/">
-          PINOY PLATTER
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="/register">
-                Have an account? Please log in
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="" href="/cart">
-                Items {cartState.cartItems.length}
-              </a>
-         
-            </li>
-           
-          
-          </ul>
+      <nav style={{ backgroundImage: `url(https://img1.exportersindia.com/product_images/bc-full/2019/6/6454911/banana-leaves-1561757398-4976108.jpg)` }} className="navbar navbar-expand-lg ">
+        
+        <Link to="/" className="pinoy-nav" style={{ textDecoration: 'none', backgroundImage: `url(https://cdn.pixabay.com/photo/2016/11/27/13/17/tomato-1862857__340.jpg)` }}  >PINOY PLATTER</Link>
+        <div className="right-btns" style={{backgroundImage: `url(https://cdn.pixabay.com/photo/2016/11/27/13/17/tomato-1862857__340.jpg)`}}>
+
+          <button className="log-in"><Link to="/login">LogIn</Link></button>
+          <button className="register-btn"><Link to="/register">Register</Link></button>
+          <button className="cart"><Link to="cart">Items {cartState.cartItems.length}</Link></button>
         </div>
       </nav>
+
+
     </div>
   );
 };
