@@ -2,7 +2,10 @@ import axios from 'axios'
 
 // TO REGISTER
 export const registerUser = (user) => async dispatch => {
-
+    // 
+    // await is used for calling an async function and waits for it to resolve or reject
+// await is used for calling an async function and waits for it to resolve or reject.
+// await blocks the execution of the code within the async function in which it is located.
     dispatch({ type: 'USER_REGISTER_REQUEST' })
     try {
         // posts the user data gathered from register form

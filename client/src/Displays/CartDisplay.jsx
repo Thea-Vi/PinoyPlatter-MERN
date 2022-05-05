@@ -9,6 +9,7 @@ const CartDisplay = () => {
     // useSelector- takes current state as an arg and returns whatever data you want from it
 
     const cartState = useSelector(state => state.cartReducer)
+
     const cartItems = cartState.cartItems
     const dispatch = useDispatch()
 
@@ -44,7 +45,7 @@ const CartDisplay = () => {
                                         <button onClick={() => { dispatch(addToCart(item, item.quantity - (1), item.platters)) }}> - </button> &nbsp;
                                         <b>{item.quantity}</b> &nbsp;
                                         <button onClick={() => { dispatch(addToCart(item, item.quantity + (1), item.platters)) }}> + </button> &nbsp;
-                                        <img src={item.image} style={{ width: "100px", height: "100px" }} />
+                                        <img src={item.image} style={{ width: "50px", height: "50px" }} />
                                     </div>
                                     <button className='btn btn-danger' onClick={() => { dispatch(deleteItemCart(item)) }}>Remove Item</button>
                                 </div>
@@ -57,7 +58,7 @@ const CartDisplay = () => {
                     <h6>+ tax(10%)</h6>
 
                     <p>Total: ${finalTotal}</p>
-                    <button className='btn btn-primary'><Link to="/login">CheckOut</Link></button>
+                    <Link to="/register">CheckOut</Link>
                 </div>
 
             </h1>

@@ -20,14 +20,18 @@ const Navbar = () => {
   return (
     <nav style={{ backgroundImage: `url(https://img1.exportersindia.com/product_images/bc-full/2019/6/6454911/banana-leaves-1561757398-4976108.jpg)` }} className="navbar navbar-expand-lg " className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/" className="pinoy-nav" style={{ textDecoration: 'none', backgroundImage: `url(https://cdn.pixabay.com/photo/2016/11/27/13/17/tomato-1862857__340.jpg)` }}>PINOY PLATTER</Link>
-      <ul>
+      <div>
+      <ul className="left-nav">
         <li>
-          <h3><a href="/register">Register</a></h3>
-          {userCurrent ? (<h1>{userCurrent.email}</h1>) : (<a href="/login">LogIn</a>)}
+          <button className="btn btn-primary"><a href="/register">Register</a></button> &nbsp;
+          {userCurrent ? (<h1>{userCurrent.email}</h1>) : (<button className="btn btn-primary"><a href="/login">LogIn</a></button>)}
           <h3><a href="/cart">Items {cartState.cartItems.length}</a></h3>
-          <button onClick={() => {dispatch(logoutUser())}}>Log Out</button>
+          <button className="btn btn-success" onClick={() => {dispatch(logoutUser())}}>Log Out</button>
         </li>
       </ul>
+
+      </div>
+
       
     </nav >
   )

@@ -38,12 +38,11 @@ const RegisterDisplay = () => {
                 password,
         
             }
-            // console.log(user)
+            console.log(user)
             dispatch(registerUser(user))
         }
 
     }
-
 
     return (
         <main style={{ backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/576c194cf5e231d654d02378/1479430130486-3I4R5GM4OVVDLX96R9UP/image-asset.jpeg?format=1000w)` }}>
@@ -59,17 +58,18 @@ const RegisterDisplay = () => {
                             <input onChange={(e) => { setEmail(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" required className='form-control' placeholder="Email" value={email} />
 
                             <label>Password</label>
-                            <input onChange={(e) => { setPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" required className='form-control' placeholder="Password" value={password} />
+                            <input onChange={(e) => { setPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="password" name="" required className='form-control' placeholder="Password" value={password} />
 
                             <label>Confirm Password</label>
-                            <input onChange={(e) => { setConfirmPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" required className='form-control' placeholder="Confirm Password" value={confirmPassword} />
+                            <input onChange={(e) => { setConfirmPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="password" name="" required className='form-control' placeholder="Confirm Password" value={confirmPassword} />
                         </div>
-                    </form>
                         <button onClick={register} className='btn btn-primary'>Register</button>
-                    <button className='btn btn-warning'><Link to="/login">Log In</Link></button>
+                        <div className='alreadyuser'>
+                            <Link to="/login">Already have an account?</Link>
+                        </div>
+
+                    </form>
                 </div>
-
-
             </div>
         </main>
     )

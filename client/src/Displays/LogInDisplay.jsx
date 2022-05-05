@@ -47,7 +47,7 @@ const LogInDisplay = () => {
                             <input required onChange={(e) => { setEmail(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name="" className='form-control' value={email} />
 
                             <label>Password</label>
-                            <input required onChange={(e) => { setPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="text" name=""  className='form-control' value={password}/>
+                            <input required onChange={(e) => { setPassword(e.target.value) }} style={{ backgroundColor: "rgb(30,29,29)", color: "white" }} type="password" name=""  className='form-control' value={password}/>
                         </div>
                         <button onClick={login}  className='btn btn-primary'>Log In</button>
                     </form>
