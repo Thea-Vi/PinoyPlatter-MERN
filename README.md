@@ -1,7 +1,7 @@
 # PinoyPlatter-MERN
 
 <h2>Description</h2>
-Pinoy Platter is a food E-commerce site
+Pinoy Platter is a food E-commerce site - no payment feature...yet :)
 <br />
 
 <h2>Languages | Framework | Database Used</h2>
