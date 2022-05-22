@@ -6,7 +6,7 @@ Pinoy Platter is a food E-commerce site - no payment feature...yet :)
 
 <h2>Languages | Framework | Database Used</h2>
 
-- <b>Javacript | React/Redux | MongoDB | Mongoose | HTML | CSS | Bootstrap| Express | Node.js</b> 
+- <b>Javascript | React/Redux | MongoDB | Mongoose | HTML | CSS | Bootstrap| Express | Node.js</b> 
 
 
 <h2>IDE used</h2>
